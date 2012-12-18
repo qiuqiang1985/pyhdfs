@@ -194,15 +194,15 @@ pyhdfs的使用说明
    $ python listdir.py
    [{'mName': 'hdfs://ugi:64310/user/ns-lsp/logs/aaaaa', 'mGroup': 'ns-lsp', 
     'mSize': 0, 'mOwner': 'ns-lsp', 'mReplication': 1, 'mBlockSize': 0, 'mKind': 'Directory', 'mLastAccess': 0, 
-    'mLastMod': 1245998859}, {'mName': 'hdfs://jx-spi-test9.jx.baidu.com:64310/user/ns-lsp/logs/baike', 
+    'mLastMod': 1245998859}, {'mName': 'hdfs://ugi:64310/user/ns-lsp/logs/baike', 
     'mGroup': 'ns-lsp', 'mSize': 0, 'mOwner': 'ns-lsp', 'mReplication': 1, 'mBlockSize': 0, 'mKind': 'Directory', 
-    'mLastAccess': 0, 'mLastMod': 1246010093}, {'mName': 'hdfs://jx-spi-test9.jx.baidu.com:64310/user/ns-lsp/logs/cjj', 
+    'mLastAccess': 0, 'mLastMod': 1246010093}, {'mName': 'hdfs://ugi:64310/user/ns-lsp/logs/cjj', 
     'mGroup': 'ns-lsp', 'mSize': 0, 'mOwner': 'ns-lsp', 'mReplication': 1, 'mBlockSize': 0, 'mKind': 'Directory', 
-    'mLastAccess': 0, 'mLastMod': 1246335743}, {'mName': 'hdfs://jx-spi-test9.jx.baidu.com:64310/user/ns-lsp/logs/cjj1', 
+    'mLastAccess': 0, 'mLastMod': 1246335743}, {'mName': 'hdfs://ugi:64310/user/ns-lsp/logs/cjj1', 
     'mGroup': 'ns-lsp', 'mSize': 0, 'mOwner': 'ns-lsp', 'mReplication': 1, 'mBlockSize': 0, 'mKind': 'Directory', 
-    'mLastAccess': 0, 'mLastMod': 1246335136}, {'mName': 'hdfs://jx-spi-test9.jx.baidu.com:64310/user/ns-lsp/logs/image', 
+    'mLastAccess': 0, 'mLastMod': 1246335136}, {'mName': 'hdfs://ugi:64310/user/ns-lsp/logs/image', 
     'mGroup': 'ns-lsp', 'mSize': 0, 'mOwner': 'ns-lsp', 'mReplication': 1, 'mBlockSize': 0, 'mKind': 'Directory', 
-    'mLastAccess': 0, 'mLastMod': 1245999023}, {'mName': 'hdfs://jx-spi-test9.jx.baidu.com:64310/user/ns-lsp/logs/maochang', 
+    'mLastAccess': 0, 'mLastMod': 1245999023}, {'mName': 'hdfs://ugi:64310/user/ns-lsp/logs/maochang', 
     'mGroup': 'ns-lsp', 'mSize': 0, 'mOwner': 'ns-lsp', 'mReplication': 1, 'mBlockSize': 0, 'mKind': 'Directory', 
     'mLastAccess': 0, 'mLastMod': 1246276821}]
 ```
@@ -257,7 +257,7 @@ listDirectory返回的是一个含有字典元素的列表，每个字典包含�
 
 ```
     target_fs = hadoop.HadoopDFS("username","password","ugi",64310)
-    fs = hadoop.HadoopDFS("ns-lsp","lsptest","jx-spi-test9.jx.baidu.com",64310)
+    fs = hadoop.HadoopDFS("username","password","ugi",64310)
     print fs.copy("/user/ns-lsp/logs/cjj","/user/ns-lsp/logs/cjj_new",target_fs)
     fs.disconnect()
 ```
@@ -324,7 +324,7 @@ listDirectory返回的是一个含有字典元素的列表，每个字典包含�
 
 ```
    $ python gethosts.py
-   ['jx-spi-test3.jx.baidu.com']
+   ['xxxx']
 ```
 
 ###如何获取一个文件/目录的信息?###
